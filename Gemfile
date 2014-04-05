@@ -1,3 +1,5 @@
+#Gemfile 
+
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -14,6 +16,9 @@ end
 
 #Use Twitter Bootstrap 
 gem 'bootstrap-sass', '~> 3.1.1'
+
+#Adding Devise
+gem 'devise'  
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
@@ -46,6 +51,9 @@ gem 'rails_12factor', group: :production
 
 # Faker Gem
 gem 'faker'
+
+#Figaro Gem
+gem 'figaro'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

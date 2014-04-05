@@ -30,8 +30,9 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     if @post.update_attributes(params.require(:post).permit(:title, :body))
       flash[:notice] = "Post was updated."
+      redirect_to @post 
     else 
-      flash[:error] = "there was an error saving your post. Please try again."
+      flash[:error] = "There was an error saving your post. Please try again."
       render :edit
     end
   end
