@@ -6,3 +6,9 @@ class User < ActiveRecord::Base
   has_many :posts
         
 end
+
+def role?( base_role)
+  role == base_role.to_s
+end
+
+
