@@ -80,3 +80,4 @@ Bloccit::Application.configure do
 
   config.action_mailer.default_url_options = { host: 'keaton-bloccit.herokuapp.com' }
 end
+end
