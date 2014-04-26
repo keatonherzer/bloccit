@@ -14,4 +14,9 @@
       <%= link_to "Edit", edit_topic_post_path(@topic,@post), class: 'btn btn-success' %>
     <% end %>
   </div>
+  <div>
+    <h2> Comments </h2>
+    <%= render "comments/comment", collection: @comment %>
+    <%= render "comments/form", collection: @comment %>
+  </div>
 </div>

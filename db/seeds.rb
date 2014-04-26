@@ -58,7 +58,15 @@ member.save
     topics.rotate!
   end
 end
- 
+
+25.times do
+  comments = Comment.new(
+    user: user,
+    post: post,
+    body: Faker::Lorem.paragraph)
+  end
+
+
 ############################################
  
 puts "Seed finished"
