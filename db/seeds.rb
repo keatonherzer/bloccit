@@ -59,12 +59,16 @@ member.save
   end
 end
 
-25.times do
-  comments = Comment.new(
+# tried to create comments for each post w/ random user 
+
+15.times do
+  post = Post.first
+  comment = Comment.create(
     user: user,
-    post: post,
+    # post: Post.find(:id),
     body: Faker::Lorem.paragraph)
-  end
+  comment.save
+end
 
 
 ############################################

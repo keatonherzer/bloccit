@@ -12,6 +12,7 @@ end
 
 group :development do
   gem 'sqlite3'
+  gem 'pry'
 end
 
 #Use Twitter Bootstrap 
@@ -58,7 +59,6 @@ gem 'figaro'
 # Pundit Gem
 gem 'pundit'
 
-gem 'pry'
 gem 'redcarpet'
 gem 'carrierwave'
 gem 'mini_magick'
