@@ -61,15 +61,30 @@ end
 
 # tried to create comments for each post w/ random user 
 
-15.times do
-  post = Post.first
-  comment = Comment.create(
-    user: user,
-    # post: Post.find(:id),
-    body: Faker::Lorem.paragraph)
-  comment.save
+# 15.times do
+#   post = Post.first
+#   comment = Comment.create(
+#     user: user,
+#     # post: Post.find(:id),
+#     body: Faker::Lorem.paragraph)
+#   comment.save
+# end
+############################################
+
+#Create Posts and Ranks
+50.times do
+  post = Post.create(
+    user:   users.sample,
+    topic:  topics.sample,
+    title:  Lorem.sentence,
+    body:   Lorem.paragraph
+    )
+
+  post.update_attribute(:created_at, rand(10.minutes .. 1.year).ago)
+  post.update_rank
 end
 
+posts = Post.all
 
 ############################################
  
