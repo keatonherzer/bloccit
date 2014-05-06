@@ -7,11 +7,16 @@ class User < ActiveRecord::Base
   mount_uploader :avatar, AvatarUploader
   has_many :comments
   has_many :votes, dependent: :destroy
+  has_many :favorites, dependent: :destroy
 
   def role?( base_role)
     role == base_role.to_s
   end
-        
+
+  def favorited(post)
+    self.favorites.where(post_id: post.id).first
+  end
+      
 end
 
 
