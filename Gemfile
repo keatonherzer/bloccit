@@ -15,6 +15,11 @@ group :development do
   gem 'pry'
 end
 
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails', '~> 4.0'
+end
+
 #Use Twitter Bootstrap 
 gem 'bootstrap-sass', '~> 3.1.1'
 
